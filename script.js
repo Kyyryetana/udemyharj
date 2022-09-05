@@ -23,3 +23,4 @@
 
 // const age = calcAge(1986, "Niko");
 // const age1 = calcAge(1985, "Anniina");
+// Voisitko toimia???
