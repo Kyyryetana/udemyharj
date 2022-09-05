@@ -24,3 +24,44 @@
 // const age = calcAge(1986, "Niko");
 // const age1 = calcAge(1985, "Anniina");
 // Voisitko toimia???
+
+// const calcAverage = (a,b,c) => (a+b+c) / 3;
+// //test1
+// const dolphins = calcAverage(44,23,71);
+// const koalas = calcAverage(65,54,49);
+
+// //test2
+// // const dolphins = calcAverage(85,54,41);
+// // const koalas = calcAverage(23,34,27);
+
+// const checkWinner = function(averageDolphins, averageKoalas){
+//     if(averageDolphins >= 2 * averageKoalas){
+//         console.log(`Dolphins won! (${dolphins} vs. ${koalas})`);
+//     }else if(averageKoalas >= 2 * averageDolphins){
+//         console.log(`Koalas won! (${koalas} vs. ${dolphins})`);
+//     }else{
+//         console.log(`No one won. (Dolphins ${dolphins}pts vs. Koalas ${koalas}pts)`);
+//     }
+// }
+
+// checkWinner(dolphins, koalas);
+
+////////////////////////////
+
+// const friend1 = 'Mikaeli';
+// const friend2 = 'Stepheni';
+// const friend3 = 'Pete';
+
+// const friends = ['Mikaeli','Stepheni', 'Pete'];
+// console.log(friends);
+
+// const years = new Array(1234,3454,4567,7594);
+// console.log(years[0]);
+
+// const calcAge = function (birthYear){
+//     return 2022 - birthYear;
+// }
+
+// const years = [1986,1896,1456,2003,2018];
+
+// console.log(calcAge(years[0]));
