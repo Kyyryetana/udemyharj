@@ -65,3 +65,32 @@
 // const years = [1986,1896,1456,2003,2018];
 
 // console.log(calcAge(years[0]));
+
+// const friends = ['Mikaeli','Stepheni', 'Pete'];
+// //add elements
+// friends.push('Hemmo');
+// friends.unshift('Harri');
+// //remove elements
+// friends.pop();
+// friends.shift();
+
+// console.log(friends);
+
+//////////////////////////////
+
+// const calcTip = (a) => {
+//     if(a >= 50 && a <= 300) {
+//         return Math.floor((a * 1.15 - a) * 100) / 100
+//     } 
+//     return Math.floor((a * 1.2 - a) * 100) / 100
+// }
+// calcTip(125)
+
+// const bills = [1, 2, 3];
+// const tips = bills.map(bill => calcTip(bill));
+// const totals = bills.map((bill, index) => Math.floor((bill + tips[index])*100)/100);
+
+// console.log(bills, tips, totals);
+
+//////////////////////////////
+
