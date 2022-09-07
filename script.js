@@ -94,3 +94,37 @@
 
 //////////////////////////////
 
+// const niko = {
+//     firstName: 'Niko',
+//     lastName: 'Alander',
+//     age: 2022 - 1986,
+//     hobby: 'None'
+// };
+
+// const anniina = {
+//     firstName: 'Anniina',
+//     lastName: 'Alander',
+//     age: 2022 - 1985,
+//     hobby: 'None'
+// };
+
+// if(niko.age > anniina.age) {
+//     console.log(`Niko on vanhempi (${niko.age})`);
+// } else if (anniina.age > niko.age) {
+//     console.log(`Anniina on vanhempi (${anniina.age})`);
+// } else {
+//     console.log(`Olette saman ikäisiä (${niko.age} vs. ${anniina.age})`);
+// }
+
+// const iat = niko.age > anniina.age ? console.log(`Niko on vanhempi (${niko.age})`) : console.log(`Anniina on vanhempi (${anniina.age})`);
+
+// if(niko.firstName.length > anniina.firstName.length) {
+//     console.log(`Nikon nimi on pidempi (${niko.firstName})`);
+// } else if (anniina.firstName.length > niko.firstName.length) {
+//     console.log(`Anniinan nimi on pidempi (${anniina.firstName})`);
+// } else {
+//     console.log(`Molempien nimet ovat yhtä pitkät (${niko.firstName} vs. ${anniina.firstName})`);
+// }
+
+// const nimet = niko.firstName.length > anniina.firstName.length ? console.log(`Nikon nimi on pidempi (${niko.firstName})`) : console.log(`Anniinan nimi on pidempi (${anniina.firstName})`);
+
