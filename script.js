@@ -128,3 +128,59 @@
 
 // const nimet = niko.firstName.length > anniina.firstName.length ? console.log(`Nikon nimi on pidempi (${niko.firstName})`) : console.log(`Anniinan nimi on pidempi (${anniina.firstName})`);
 
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2032 - 1986,
+//     friends: ["Michael", "Peter", "Steven"]
+// }
+
+// console.log(`"${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}"`);
+
+/////////////////////
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'Teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
+
+//     // calcAge: function (birthYear) {
+//     //     return 2037 - birthYear;
+//     // },
+
+//     // calcAge: function () {
+//     //     console.log(this);
+//     //     return 2037 - this.birthYear;
+//     // },
+
+//     // calcAge: function () {
+//     // this.age = 2037 - this.birthYear;
+//     // return this.age;
+//     // },
+
+//     // getSummary: function () {
+//     //     return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's licence.`
+//     // }
+// }
+
+// // console.log(jonas.calcAge());
+// // console.log(jonas.age);
+
+// console.log(jonas.getSummary());
+
+/////////////////////////////
+
+// for (let toisto = 0; toisto <= 10; toisto++) {
+//     console.log(`Lifting weights repetition ${toisto}`);
+// }
+
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'Teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
