@@ -1,3 +1,4 @@
+"use strict";
 //let bill = 275;
 //let bigTip = bill / 100 * 20;
 //let smallTip = bill / 100 * 15;
@@ -81,7 +82,7 @@
 // const calcTip = (a) => {
 //     if(a >= 50 && a <= 300) {
 //         return Math.floor((a * 1.15 - a) * 100) / 100
-//     } 
+//     }
 //     return Math.floor((a * 1.2 - a) * 100) / 100
 // }
 // calcTip(125)
@@ -177,10 +178,69 @@
 //     console.log(`Lifting weights repetition ${toisto}`);
 // }
 
-// const jonasArray = [
-//     'Jonas',
-//     'Schmedtmann',
-//     2037 - 1991,
-//     'Teacher',
-//     ['Michael', 'Peter', 'Steven']
-// ];
+// const types = [];
+
+// const jonas = ["Jonas", "Schmedtmann", 2037 - 1991, "Teacher", ["Michael", "Peter", "Steven"], true];
+
+// for (let i = 0; i < jonas.length; i++) {
+//    console.log(jonas[i], typeof jonas[i]);
+
+//    //types[i] = typeof jonas[i];
+//    types.push(typeof jonas[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//    ages.push(2037 - years[i]);
+// }
+
+// console.log(ages);
+
+// //continue & break
+// console.log("ONLY STRINGS");
+// for (let i = 0; i < jonas.length; i++) {
+//    if (typeof jonas[i] !== "string") continue;
+//    console.log(jonas[i], typeof jonas[i]);
+// }
+
+// console.log("BREAK WITH NUMBER");
+// for (let i = 0; i < jonas.length; i++) {
+//    if (typeof jonas[i] === "number") break;
+//    console.log(jonas[i], typeof jonas[i]);
+// }
+
+/////////////////////////
+
+// const jonas = ["Jonas", "Schmedtmann", 2037 - 1991, "Teacher", ["Michael", "Peter", "Steven"], true];
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//    console.log(i, jonas[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//    console.log(`-----Starting exercise ${exercise}`);
+
+//    for (let rep = 1; rep < 6; rep++) {
+//       console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`);
+//    }
+// }
+
+///////////////////////////////
+
+// for (let rep = 1; rep <= 10; rep++) {
+//    console.log(`Lifting weight repetition ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//    console.log(`Lifting weight repetition ${rep}`);
+//    rep++;
+// }
+
+//Problem solving--------
+
+const temperatures = [3, -2, -6,-1, 'error', 9, 13, 17, 15, 14, 9, 5];
