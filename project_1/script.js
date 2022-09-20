@@ -1,3 +1,1 @@
-function testi() {
-  //testi
-};
+'use strict'
