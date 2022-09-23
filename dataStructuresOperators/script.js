@@ -32,20 +32,80 @@ const restaurant = {
    },
 
    orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
-      console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered ${address} at ${time}`);
+      console.log(
+         `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered ${address} at ${time}`
+      );
+   },
+
+   orderPasta: function (ing1, ing2, ing3) {
+      console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
    },
 };
 
-restaurant.orderDelivery({
-   time: "22:30",
-   address: "Via del sole, 21",
-   mainIndex: 2,
-   starterIndex: 2,
-});
+//SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
 
-const arr = [7,8,9];
-const badNewArr = [1,2,arr[0],arr[1],arr[2]];
-console.log(badNewArr);
+//REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, ,risotto,...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+console.log(pizza, risotto, otherFood);
+
+// restaurant.orderDelivery({
+//    time: "22:30",
+//    address: "Via del sole, 21",
+//    mainIndex: 2,
+//    starterIndex: 2,
+// });
+
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
+
+// const newMenu = [...restaurant.mainMenu, "Gnocci"];
+// console.log(newMenu);
+
+// //copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
+
+// //join 2 arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// //iterables: arrays, strings, ,maps, sets. NOT objects
+// const str = "Jonas";
+// const letters = [...str, " ", "S."];
+// console.log(letters);
+// // console.log(`${...str} Schmedtmann`); NOT like this
+
+// //real world experiment
+// const ingridients = [
+//    // prompt("Let's make pasta! Ingridient 1?"),
+//    // prompt("Ingridient 2?"),
+//    // prompt("Ingridient 3?")
+// ];
+
+// console.log(ingridients);
+// restaurant.orderPasta(...ingridients);
+
+// //objects
+// const newRestaurant = {
+//    foundedIn: 1998,
+//    ...restaurant,
+//    founder: "Guiseppe",
+// };
+// console.log(newRestaurant);
+
+// const restaurantCopy = {...restaurant};
+// restaurantCopy.name = 'Ristorante Roma';
+// console.log(restaurantCopy.name);
+// console.log(restaurant.name);
 
 ////////////////////////
 
