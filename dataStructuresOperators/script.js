@@ -27,7 +27,7 @@ const restaurant = {
       },
    },
 
-   order: function (starterIndex, mainIndex) {
+   order(starterIndex, mainIndex) {
       return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
    },
 
@@ -40,18 +40,227 @@ const restaurant = {
    orderPasta: function (ing1, ing2, ing3) {
       console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
    },
+
+   orderPizza: function (mainIngredient, ...otherIngredients) {
+      console.log(mainIngredient);
+      console.log(otherIngredients);
+   },
 };
 
-//SPREAD, because on RIGHT side of =
-const arr = [1, 2, ...[3, 4]];
+const rest = new Map();
+rest.set("name", "Classico Italiano");
+rest.set(1, "Firenze, Italy");
+rest.set(2, "Lisbon, Portugal");
 
-//REST, because on LEFT side of =
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+rest
+   .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+   .set("open", 11)
+   .set("close", 23)
+   .set(true, "We are open :)")
+   .set(false, "We are closed :(");
 
-const [pizza, ,risotto,...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(rest.get("name"));
+console.log(rest.get(true));
+console.log(rest.get(1));
 
-console.log(pizza, risotto, otherFood);
+const time = 8;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+console.log(rest.has("categories"));
+rest.delete(2);
+// rest.clear();
+rest.set([1, 2], "Test");
+console.log(rest);
+console.log(rest.size);
+
+console.log(rest.get([1, 2]));
+
+////////////////////////////////////////
+
+// const ordersSet = new Set(["Pasta", "Pizza", "Pizza", "Risotto", "Pasta", "Pizza"]);
+// console.log(ordersSet);
+
+// console.log(new Set('Jonas'));
+
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+// ordersSet.add('Garlic bread');
+// ordersSet.add('Garlic bread');
+// ordersSet.delete('Risotto');
+// // ordersSet.clear();
+// console.log(ordersSet);
+
+// for (const order of ordersSet) console.log(order);
+
+// //example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+
+// console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size);
+
+// console.log(new Set('jonasschmedtmann').size);
+
+/////////////////////////////////////////////////
+
+// //property NAMES
+// const properties = Object.keys(restaurant.openingHours);
+// console.log(properties);
+
+// let openStr = `We are open on ${properties.length} days: `;
+// for (const day of properties) {
+//    openStr += `${day}, `
+// }
+// console.log(openStr);
+
+// // property VALUES
+// const values = Object.values(restaurant.openingHours);
+// // console.log(...values);
+
+// //Entire object
+// const entries = Object.entries(restaurant.openingHours);
+// // console.log(entries);
+
+// // [key, value]
+// for (const [key, {open, close}] of entries) {
+//    console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
+
+// if (restaurant.openingHours && restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+// //if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
+
+// // WITH optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+
+// // example
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for(const day of days) {
+//    const open = restaurant.openingHours[day]?.open ?? 'closed';
+//    console.log(`On ${day}, we open at ${open}`);
+// }
+
+// //methods
+// console.log(restaurant.order?.(0,1) ?? 'Method does no exist');
+// console.log(restaurant.orderRisotto?.(0,1) ?? 'Method does no exist');
+
+// //arrays
+// const users = [{ name:'Jonas', email: 'hello@jonas.io'}];
+// console.log(users[0]?.name ?? 'User array empty');
+
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('user array empty');
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (const item of menu) console.log(item);
+
+// for (const [i, el] of menu.entries()) {
+//    console.log(`${i+1}: ${el}`);
+// }
+
+// console.log([menu.entries()]);
+
+// const rest1 = {
+//    name: 'Capri',
+//    numGuests: 20,
+// }
+
+// const rest2 = {
+//    name: 'La Piazza',
+//    owner: 'Giovanni Rossi',
+// }
+
+// // OR assignment operator
+// // rest1.numGuests = rest1.numGuests || 10;
+// // rest2.numGuests = rest2.numGuests || 10;
+
+// // rest1.numGuests ||= 10;
+// // rest2.numGuests ||= 10;
+
+// //nullish assignment operator (null or undefined)
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// //AND assignment operator
+// // rest1.owner = rest1.owner && '<ANONYMOUS>';
+// // rest2.owner = rest2.owner && '<ANONYMOUS>';
+// rest1.owner &&='<ANONYMOUS>';
+// rest2.owner &&='<ANONYMOUS>';
+
+// console.log(rest1);
+// console.log(rest2);
+
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
+
+// //nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+// //use ANY data type, return ANY data type, short-circuiting
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// restaurant.numGuests = 23
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+// console.log('---- AND ----');
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
+
+// console.log('Hello' && 23 && null && 'Jonas');
+
+// //practical example
+// if (restaurant.orderPizza) {
+//    restaurant.orderPizza('mushrooms', 'spinach');
+// }
+
+// restaurant.orderPizza && restaurant.order('mushrooms', 'spinach');
+
+// //destructuring
+
+// //SPREAD, because on RIGHT side of =
+// const arr = [1, 2, ...[3, 4]];
+
+// //REST, because on LEFT side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+
+// const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+// console.log(pizza, risotto, otherFood);
+
+// //objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
+
+// // 2)functions
+// const add = function (...numbers) {
+//    let sum = 0;
+//    for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//    console.log(sum);
+// };
+
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// const x = [23,5,7];
+// add(...x);
+
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('mushrooms');
 
 // restaurant.orderDelivery({
 //    time: "22:30",
