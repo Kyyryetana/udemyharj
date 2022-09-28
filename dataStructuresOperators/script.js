@@ -70,6 +70,9 @@ const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
 console.log(email === normalizedEmail);
 
+//replacing
+const priceGB = "288,97£";
+
 /////////////////////////////////////
 
 // //working with strings part 1
