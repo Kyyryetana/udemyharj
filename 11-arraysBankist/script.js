@@ -82,6 +82,8 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+///////////////////////////////////////////////////
+
 const createUsernames = function (accs) {
   accs.forEach(function(acc) {
     acc.username = acc.owner
@@ -92,6 +94,8 @@ const createUsernames = function (accs) {
   });
 };
 createUsernames(accounts);
+
+//////////////////////////////////////////////////
 
 const calcDisplaySummary = function (movements) {
   const incomes = movements
@@ -115,6 +119,8 @@ const calcDisplaySummary = function (movements) {
   labelSumInterest.textContent = `${intrest}€`;
 };
 calcDisplaySummary(account1.movements);
+
+//////////////////////////////////////////////////
 
 // event handler
 let currentAccount;
@@ -347,3 +353,4 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
+
