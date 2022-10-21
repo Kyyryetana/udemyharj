@@ -85,15 +85,16 @@ displayMovements(account1.movements);
 ///////////////////////////////////////////////////
 
 const createUsernames = function (accs) {
-  accs.forEach(function(acc) {
+  accs.forEach(function (acc) {
     acc.username = acc.owner
-    .toLowerCase()
-    .split(' ')
-    .map(name => name[0])
-    .join('');
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
   });
 };
 createUsernames(accounts);
+console.log(accounts);
 
 //////////////////////////////////////////////////
 
@@ -353,4 +354,3 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
-
